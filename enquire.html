@@ -12,7 +12,7 @@
         
         <h1 class="ek">Enquire</h1>
         <div class="Enq">
-        <form action="https://httpbin.org/get" method="get">
+        
         <p class="form">
             <label form="Name">Name</label><br> 
             <input type="text" name="name" id="name" placeholder="Name" autocomplete="on" required autofocus>
@@ -24,17 +24,64 @@
         </p>
         <p class="form">
             <label form="Email">Email</label><br> 
-            <input type="email" name="name" id="name" placeholder="Email" autocomplete="on" required autofocus></p>
+            <input type="email" name="name" id="email" placeholder="Email" autocomplete="on" required autofocus></p>
             <p class="msg">
-            <label form="Message">Message</label>
+            <label form="Message">Message</label><br>
             <textarea id="message" name="message"
           rows="7" cols="15"></textarea>
           <br>
           <br>
-          <button type="submit">Submit</button>
+          <button id="btn">Submit</button>
             </form>
         </div>
         <p class="do"><a href="index.html">Back To Home</a></p>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCJ__OP455GvZAUpy3-DlTpHvJh35mHcN8",
+              authDomain: "tasks-a6ae6.firebaseapp.com",
+              databaseURL: "https://tasks-a6ae6-default-rtdb.asia-southeast1.firebasedatabase.app",
+              projectId: "tasks-a6ae6",
+              storageBucket: "tasks-a6ae6.appspot.com",
+              messagingSenderId: "136670461349",
+              appId: "1:136670461349:web:7b0684cafeb0c50de4fc4c",
+              measurementId: "G-679QRT35J8"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+    
+
+            import{getDatabase , set ,ref} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+            const db1=getDatabase();
+            var name=document.querySelector("#name");
+            var age = document.querySelector("#age");
+            var email = document.querySelector("#email");
+            var message = document.querySelector("#message");
+            var btn = document.querySelector("#btn");
+
+            function Insertdata()
+            {
+                set(ref(db1,"Enquiry/"),{
+                    Name:name.value,
+                    Age:age.value,
+                    Email:email.value,
+                    Message:message.value
+                })
+                .then(()=>{
+                    alert("Data Stored Sucessfully!")
+                })
+            }
+    btn.addEventListener('click', Insertdata);
+          </script>
           
                 
 

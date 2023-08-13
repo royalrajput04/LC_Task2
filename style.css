@@ -15,17 +15,21 @@
 
 body{
     min-height: 100%;
-    background-color: rgb(35, 35, 35);
+    background-color:rgb(150, 222, 251);
     
 }
 .header{
     display: flex;
-    justify-content: flex-start;
-    height: 40vh;
+    justify-content: center;
+    
+    height: 70vh;
     position: relative;
     max-width: 100%;
     max-height: 100%;
-    background-image: linear-gradient(to bottom ,skyblue , white);
+    background-image: url(/4584.jpg);
+   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .header img{
     position: fixed;
@@ -37,7 +41,7 @@ body{
 .enquiry{
     position: absolute;
     bottom: 0;
-    right: 70%;
+    right: 50%;
 
 }
 .enquiry p{
@@ -46,10 +50,11 @@ body{
     border-radius: 50px;
 }
 h1{
-    padding: 10px;
+    margin-top: 0px;
     font-size:5rem;
     font-family: 'Bacasime Antique', serif;
     position: relative;
+    color: rgb(31, 5, 57);
     
     
    
@@ -70,7 +75,7 @@ color: red;
 }
 header{
     
-    background-color: white;
+    background-color: rgb(245, 245, 232);
     max-width: 100%;
 }
 .menu-button{
@@ -205,13 +210,15 @@ nav{
       }
      .Enq{
         background-color: beige;
+        
+        
        
      }
      button{
         border-radius: 100px;
      }
      .do a{
-        color: aqua;
+        color: rgb(3, 19, 19);
      }
      .do a:hover,a:active{
         color: red;
@@ -242,48 +249,94 @@ nav{
      
      .tasktable p{
         color: aliceblue;
+      
         font-size: 25px;
         
      }
      .para4 h2{
         margin-bottom: 0px;
+        color: black;
      }
      .tasktable{
-        margin-left: 10px;
-     }
-     .tasktable input{
-        
-        width: 300px;
-        background-color: rgb(245, 103, 103);
+        margin-left: 0px;
+        background-color: antiquewhite;
+        height: 100%;
         text-align: center;
-        font-weight: bold;
-     }
-     .tasktable button{
-        background-color:blanchedalmond;
-        color: black;
-        width: 60px;
-     }
-     .para4 input{
-        
-        width: 300px;
-        background-color: rgb(245, 103, 103);
-        text-align: center;
-        font-weight: bold;
-     }
-     .para4 button{
-        background-color:blanchedalmond;
-        color: black;
-        width: 60px;
-     }
-     .para4{
-        margin: 10px;
-     }
-     ::placeholder{
-        color: white;
+       
+       
+       
      }
      
-
+     
+     
+     .para4 input{
         
+        width: 200px;
+        background:white;
+        text-align: center;
+        
+     }
+     
+     
+     .para4{
+        margin: 10px;
+        
+     }
+     ::placeholder{
+        color: black;
+     }
+     .taskk a{
+        color:rgb(15, 15, 15)
+     }
+     ol{
+        list-style: none;
+        counter-reset: my-counter;
 
-
+     }
+.tasktable h3{
+    font-size: 28px;
+}
+ .comp , .notcomp{
+    margin: 5px 0;
+    padding: 20px;
+    
+}
+     ol li{
+        background-color: red;
+        padding: 18px;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px 0px;
+        counter-increment: my-counter;
+        
+        
+     }
+     ol.comp li{
+        background-color: green;
+     }
+     ol li::before{
+        content: counter(my-counter);
+        background: #08a1d3;
+        height: 2rem;
+        width: 2rem;
+        display: inline-block;
+        line-height: 2rem;
+        margin-right: 1rem;
+        text-align: center;
+       border-radius: 50%;
+       
+      
+    
+     
+     }
+     li button{
+        float: right;
+        background:none;
+        border: none;
+        outline: none;
+        padding: 5px;
+        line-height: 28px;
+        margin-right: 10px;
+        cursor: pointer;
+     }
      
