@@ -1,0 +1,362 @@
+
+*{
+    margin-left: 0px;
+    margin-top: 5px;
+}
+@media  screen and (max-width:779px)
+{
+    h1{
+    font-size: 2.5rem;   
+    }
+    
+}
+
+ 
+
+body{
+    
+   /* background-color:rgb(150, 222, 251);*/
+   background-image: url("https://royalrajput04.github.io/Background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  
+
+
+   
+      
+   
+   
+    
+}
+.header{
+    display: flex;
+    justify-content: center;
+    
+    height: 70vh;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.header img{
+    position: fixed;
+    max-width: 30%;
+    max-height: 40%;
+    right: 20%;
+}
+
+.enquiry{
+    position: absolute;
+    bottom:30%;
+    right: 45%;
+    
+
+}
+.enquiry p{
+    font-weight: bold;
+    border: solid rgb(13, 13, 13);
+    border-radius: 50px;
+}
+h1{
+    margin-top: 0px;
+    font-size:5rem;
+    font-family: 'Bacasime Antique', serif;
+    position: relative;
+    color: rgb(31, 5, 57);
+    
+    
+   
+}
+.subpart1{
+    
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+
+a{
+    color: black;
+}
+a:hover ,:active{
+color: red;
+}
+header{
+    
+    background-color: none;
+    max-width: 100%;
+}
+.menu-button{
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.menu-icon , .menu-icon::before,.menu-icon::after{
+background-color: rgb(16, 15, 15);
+width: 30px;
+height: 5px;
+border-radius: 5px;
+position: absolute;
+transition: all 0.5s;
+}
+.menu-icon::before,.menu-icon::after{
+    content: "";
+}
+.menu-icon::before{
+    transform: translate(-15px,-12px);
+}
+.menu-icon::after{
+    transform: translate(-15px,12px);
+}
+nav ul{
+display: flex;
+flex-flow: column nowrap;
+list-style-type: none;
+
+}
+nav li{
+    padding: 0.5rem;
+    border-top: 1px solid black;
+}
+@keyframes hammenu{
+    0%{
+        transform: scaleY(0);
+    }
+    80%{
+        transform: scaleY(1.2);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+nav a{
+    display: block;
+    text-align: center;
+    
+}
+nav a:any-link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover ,:active{
+    color: red;
+}
+nav{
+    display: none;
+    transform-origin: top center;
+    animation: hammenu 1.0s ease-in-out forwards;
+
+}
+:is(header:hover,header:focus-within) .menu-icon{
+    background-color: transparent;
+}
+:is(header:hover,header:focus-within) .menu-icon::before{
+    transform: translateX(-15px) rotate(45deg);
+}
+    :is(header:hover,header:focus-within) .menu-icon::after{
+        transform: translateX(-15px) rotate(-45deg);
+    }
+    :is(header:hover,header:focus-within) nav{
+        display: block;
+    }
+    .logo img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        margin-left: auto;
+        
+     
+      }
+     
+      
+      .enquiry a{
+        color: purple;
+        text-decoration: none;
+      }
+      .enquiry a:hover,a:active{
+        color: red;
+      }
+      .msg input[type="text"]
+      {
+        height: 150px;
+        
+      }
+      .form {
+        color: black;
+        font-size: large;
+        font-weight: bold;
+      }
+      .msg{
+        color: black;
+        font-size: large;
+        font-weight: bold;
+        margin-left: 30px;
+        padding: 2rem;
+
+      }
+      .form{
+        margin-left: 50px;
+        padding: 1rem;
+      }
+      .form input{
+        width: 200px;
+    
+      }
+      .ek{
+        display: flex;
+        justify-content: center;
+        
+        font-size: 50px;
+        color: rgb(28, 27, 27);
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      .Enq{
+        justify-content: center;
+        text-align: center;
+      }
+     
+     button{
+        border-radius: 100px;
+     }
+     .do a{
+        color: rgb(3, 19, 19);
+     }
+     .do a:hover,a:active{
+        color: red;
+     }
+     .para2{
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: rgb(13, 13, 13);
+        font-size: 50px;
+
+     }
+     .contact{
+        background-color: beige;
+        padding: 2rem;
+        font-size: large;
+     }
+     .para3{
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: rgb(34, 34, 2);
+        font-size: 50px;
+     }
+     .para4{
+        color: aliceblue;
+        font-size: 30px;
+     }
+     textarea{
+        width: 200px;
+        margin-left: 20px;
+     }
+     
+     
+     .tasktable p{
+        color: aliceblue;
+      
+        font-size: 25px;
+        
+     }
+     .para4 h2{
+        margin-bottom: 0px;
+        color: black;
+     }
+     .tasktable{
+        margin-left: 0px;
+        
+        height: 100%;
+        text-align: center;
+       
+     }
+     .para4 button{
+        width: 80px;
+        border-radius: 5;
+        background-color: white;
+        text-align: center;
+     }
+     
+     
+     .para4 input{
+        
+        width: 100%;
+        height:30px;
+        
+    
+        background:white;
+        text-align: center;
+        
+     }
+     
+     
+     .para4{
+        margin: 10px;
+        
+     }
+     ::placeholder{
+        color: black;
+        font-size: 18px;
+     }
+     .taskk a{
+        color:rgb(15, 15, 15)
+     }
+     ol{
+        list-style: none;
+        counter-reset: my-counter;
+
+     }
+.tasktable h3{
+    font-size: 28px;
+}
+ .comp , .notcomp{
+    margin: 5px 0;
+    padding: 20px;
+    
+}
+     ol li{
+        background-color: red;
+        padding: 18px;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px 0px;
+        counter-increment: my-counter;
+        
+        
+     }
+     ol.comp li{
+        background-color: green;
+     }
+     ol li::before{
+        content: counter(my-counter);
+        background: #08a1d3;
+        height: 2rem;
+        width: 2rem;
+        display: inline-block;
+        line-height: 2rem;
+        margin-right: 1rem;
+        text-align: center;
+       border-radius: 50%;
+       
+      
+    
+     
+     }
+     li button{
+        float: right;
+        background:none;
+        border: none;
+        outline: none;
+        padding: 5px;
+        line-height: 28px;
+        margin-right: 10px;
+        cursor: pointer;
+     }
+     
