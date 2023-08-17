@@ -16,7 +16,7 @@
 body{
     
    /* background-color:rgb(150, 222, 251);*/
-   background-image: url(/flat-lay-clean-office-desk.jpg);
+   background-image: url(/flat-lay-clean-office-desk.Jpg);
   background-size: cover;
   background-attachment: fixed;
   
@@ -48,7 +48,7 @@ body{
 .enquiry{
     position: absolute;
     bottom:30%;
-    right: 50%;
+    right: 45%;
     
 
 }
