@@ -1,7 +1,7 @@
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-  import { getDatabase , ref , push } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+  import { getDatabase , ref , push , onValue , remove} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,7 +21,7 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig)
   const database = getDatabase(app)
-const taskinDb = ref(database , "Added")
+const taskinDb = ref(database , "Added" )
 const CompTaskinDb = ref(database , "Completed")
 
         
@@ -39,7 +39,12 @@ const CompTaskinDb = ref(database , "Completed")
 
         function addList(e){
             let inputValue = input.value
+            
+            
+            
+            
             push(taskinDb,inputValue)
+            
             console.log(input.value + " added to database");
            
             const notcomp = document.querySelector('.notcomp');
@@ -55,6 +60,7 @@ const CompTaskinDb = ref(database , "Completed")
             editbtn.innerHTML='<i class="fa-solid fa-pen-to-square"></i>'
 
             let a=input.value;
+            
             
 
             if(input.value != ''){
@@ -72,6 +78,7 @@ const CompTaskinDb = ref(database , "Completed")
                 checkbtn.style.display='none';
                 
                 push(CompTaskinDb,a)
+            
 
             console.log( newLi.textContent+ " added to database");
             
@@ -79,13 +86,41 @@ const CompTaskinDb = ref(database , "Completed")
             }
                 );
 
+             /*  onValue(taskinDb , function(snapshot){
+                    let itemsarray = Object.keys(snapshot.val())
+                    let itm=itemsarray[0];*/
+                    
+                
+                   
+               
+                    
+                   
+
                 delbtn.addEventListener('click',function(){
                 const parent=this.parentNode;
                 parent.remove();
+               
+
+                
+                let loc = ref(database,"Added/")
+                remove(loc)
+                let loc2 = ref(database,"Completed/")
+                remove(loc2)
+                
+               
+                
+
+
+                
+            
                 
                
             }
                 );
+        
+                
+        
+                
                editbtn.addEventListener('click',function(){
                 const parent=this.parentNode;
                 const taskText=parent.firstChild.textContent;
@@ -94,8 +129,14 @@ const CompTaskinDb = ref(database , "Completed")
                 {
                     parent.firstChild.textContent=editText;
                 }
+        
 
                });
 
-              
+               
+
+               
+
+
+           
         }
